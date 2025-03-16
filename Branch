@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignan's Institute of Information Technology Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+        }
+        .chat-container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .question {
+            cursor: pointer;
+            padding: 10px;
+            margin: 5px 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .question:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .answer {
+            display: none;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vignan's Institute of Information Technology Chatbot</h1>
+    <div class="chat-container">
+        <h2>Click on a Question to See the Answer</h2>
+        
+        <h2>Available Branches</h2>
+        <div class="question" onclick="toggleAnswer('cse')">Computer Science & Engineering (CSE)</div>
+        <div class="answer" id="cse">Cutoff Rank: 12768 | Fee: ₹57,200/year | HOD: Dr. Mohan Mahanty</div>
+        
+        <div class="question" onclick="toggleAnswer('ece')">Electronics & Communication Engineering (ECE)</div>
+        <div class="answer" id="ece">Cutoff Rank: 25732 | Fee: ₹57,200/year | HOD: Dr. Ch. Ramesh Babu</div>
+        
+        <div class="question" onclick="toggleAnswer('eee')">Electrical & Electronics Engineering (EEE)</div>
+        <div class="answer" id="eee">Cutoff Rank: 70627 | Fee: ₹57,200/year | HOD: Dr. P. Sekhar</div>
+        
+        <div class="question" onclick="toggleAnswer('me')">Mechanical Engineering (ME)</div>
+        <div class="answer" id="me">Cutoff Rank: 108634 | Fee: ₹57,200/year | HOD: Dr. S. Rambabu</div>
+        
+        <div class="question" onclick="toggleAnswer('ce')">Civil Engineering (CE)</div>
+        <div class="answer" id="ce">Cutoff Rank: 115158 | Fee: ₹57,200/year | HOD: Mr. M. Padmakar</div>
+        
+        <div class="question" onclick="toggleAnswer('it')">Information Technology (IT)</div>
+        <div class="answer" id="it">Cutoff Rank: 26796 | Fee: ₹57,200/year | HOD: Dr. G. Neelima</div>
+        
+        <div class="question" onclick="toggleAnswer('ai_ds')">Artificial Intelligence & Data Science (AI&DS)</div>
+        <div class="answer" id="ai_ds">Cutoff Rank: 22935 | Fee: ₹57,200/year | HOD: Dr. T.V. Madhusudana Rao</div>
+        
+        <div class="question" onclick="toggleAnswer('ds')">Data Science (DS)</div>
+        <div class="answer" id="ds">Cutoff Rank: 19152 | Fee: ₹57,200/year | HOD: Dr. B. Dinesh Reddy</div>
+        
+        <div class="question" onclick="toggleAnswer('cyber_sec')">Cyber Security</div>
+        <div class="answer" id="cyber_sec">Cutoff Rank: 23043 | Fee: ₹57,200/year | HOD: Dr. B. Dinesh Reddy</div>
+        
+        <div class="question" onclick="toggleAnswer('ai')">Artificial Intelligence</div>
+        <div class="answer" id="ai">Cutoff Rank: 26911 | Fee: ₹57,200/year | HOD: Dr. B. Dinesh Reddy</div>
+        
+        <h2>Additional Admission Information</h2>
+        <div class="question" onclick="toggleAnswer('scholarship')">Scholarship Information</div>
+        <div class="answer" id="scholarship">Eligibility: Merit & Reserved Categories | Amount: Varies | Apply: Online via VIIT Portal</div>
+        
+        <div class="question" onclick="toggleAnswer('seat_allocation')">Seat Allocation Details</div>
+        <div class="answer" id="seat_allocation">Convener Quota: 70% | Management Quota: 30%</div>
+        
+        <div class="question" onclick="toggleAnswer('counseling')">Counseling Information</div>
+        <div class="answer" id="counseling">Total Rounds: 3 | Students Joined: 500+</div>
+        
+        <div class="question" onclick="toggleAnswer('special_rounds')">Special Round Admissions</div>
+        <div class="answer" id="special_rounds">Conducted: Yes | Extra Students Admitted: 50</div>
+        
+        <div class="question" onclick="toggleAnswer('total_admissions')">Total Admissions Per Branch</div>
+        <div class="answer" id="total_admissions">CSE: 200, ECE: 150, EEE: 100, ME: 80, CE: 60, IT: 120, AI&DS: 90</div>
+        
+        <div class="question" onclick="toggleAnswer('scholarship_students')">Students Eligible for Scholarships</div>
+        <div class="answer" id="scholarship_students">Received: 300 | Paying Full Fees: 200</div>
+        
+        <div class="question" onclick="toggleAnswer('important_dates')">Important Dates & Deadlines</div>
+        <div class="answer" id="important_dates">Admission Open: 23 July | Close: 25 July | Counseling: 28 July</div>
+        
+        <div class="question" onclick="toggleAnswer('documents')">Documents Required</div>
+        <div class="answer" id="documents">Mark sheets, ID Proof, Certificates</div>
+        
+        <div class="question" onclick="toggleAnswer('hostel')">Hostel & Accommodation</div>
+        <div class="answer" id="hostel">Rooms Available | Fee: ₹50,000/year | Facilities: WiFi, Mess</div>
+    </div>
+    
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            answer.style.display = answer.style.display === "none" || answer.style.display === "" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
